@@ -1,4 +1,8 @@
 /** @type {import('tailwindcss').Config} */
+
+const _ = require('lodash')
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
   content: ["./index.html"],
   darkMode: 'class',
@@ -10,6 +14,10 @@ module.exports = {
       },
       spacing: {
         '15': '3.75rem'
+      },
+      screens:{
+        min: '1000px',
+        scr: '550px'
       },
       zIndex: {
         '-1':'-1'

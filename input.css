@@ -6,6 +6,9 @@
     .nav-link{
         @apply flex items-center h-10 rounded px-3 text-prototurk font-medium text-sm hover:bg-gray-100 transition-colors dark:text-white dark:hover:bg-gray-800
     }
+    .nav-link.active{
+        @apply bg-gray-800 text-white
+    }
     .modal{
         @apply fixed inset-0 bg-prototurk bg-opacity-60 flex items-center justify-center invisible opacity-0 transition-opacity
     }
@@ -14,6 +17,12 @@
     }
     .modal-content{
         @apply bg-white p-10 min-w-[600px] rounded dark:bg-gray-900
+    }
+    .sidebar{
+        @apply border-r absolute md:relative flex-shrink-0 inset-0 opacity-0 md:opacity-100 invisible md:visible border-gray-100 dark:border-gray-700 divide-solid divide-y divide-gray-100 dark:divide-gray-700 flex flex-col overflow-auto top-15 md:top-0 transition-all w-full md:w-64 scale-90 md:scale-100
+    }
+    .sidebar.active{
+        @apply h-full z-10 bg-white dark:bg-gray-900 dark:text-white opacity-100 visible
     }
 }
 
